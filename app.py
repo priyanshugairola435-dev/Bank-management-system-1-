@@ -61,7 +61,7 @@ def createAC():
         conn.commit()
         conn.close()
 
-        return "done"
+        return redirect("/")
 
     return render_template("ac_create.html")
 
