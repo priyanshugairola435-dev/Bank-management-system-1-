@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Money</title>
+    <style>
+        /* Page background */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Form container */
+        form {
+            background: #ffffffcc; /* white with slight transparency */
+            padding: 40px 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Heading inside form */
+        form h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Input fields styling */
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        /* Input focus effect */
+        form input:focus {
+            border-color: #5c67f2;
+            box-shadow: 0 0 5px #5c67f2;
+            outline: none;
+        }
+
+        /* Submit button styling */
+        form button {
+            width: 100%;
+            padding: 12px;
+            background: #5c67f2;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Button hover effect */
+        form button:hover {
+            background: #4a54e1;
+            transform: translateY(-2px);
+        }
+
+        /* Optional small note */
+        form .note {
+            font-size: 13px;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/transfer" method="POST">
+        <h2>Transfer Money</h2>
+        <input type="text" name="ac_no" placeholder="Your Account Number" required>
+        <input type="password" name="password" placeholder="Your Password" required>
+        <input type="text" name="receiver" placeholder="Receiver Account Number" required>
+        <input type="number" name="amount" placeholder="Amount" required min="1">
+        <button type="submit">Transfer</button>
+        <!-- <p class="note">Ensure account details are correct</p> -->
+    </form>
+
+</body>
+</html>

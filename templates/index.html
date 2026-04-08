@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            color: #00ffd5;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ffd5;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px 50px 20px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 50px;
+        }
+
+        .features a.card {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .features a.card:hover {
+            transform: translateY(-10px);
+            background: rgba(0,255,213,0.2);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #00ffd5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MyBank</h1>
+    <nav>
+        <span>Welcome, {{ username }}</span>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Secure & Smart Banking</h2>
+    <p>Transfer money, check balance, and manage your account easily.</p>
+</section>
+
+<section class="features">
+    <a href="/transfer" class="card">
+        <h3>💸 Transfer Money</h3>
+        <p>Send money instantly and securely to any account.</p>
+    </a>
+
+    <a href="/balance" class="card">
+        <h3>📊 Check Balance</h3>
+        <p>View your account balance anytime, anywhere.</p>
+    </a>
+
+    <a href="/" class="card">
+        <h3>🚪 Logout</h3>
+        <p>Securely log out of your account.</p>
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 MyBank | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .success-box {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+        }
+        .success-box h1 {
+            color: #4BB543;
+            margin-bottom: 20px;
+        }
+        .success-box p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .success-box .amount, .success-box .receiver {
+            font-weight: bold;
+            color: #5c67f2;
+        }
+        .success-box button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5c67f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .success-box button:hover {
+            background-color: #4a54e1;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-box">
+        <h1>Payment Successful ✅</h1>
+        <p>Transferred Amount:₹{{amount}}</p>
+        <p>Receiver Account No: {{receiver}}</p>
+        <p>your available balance: {{new_balance}}</p>
+        <button onclick="window.location.href='/dashboard'">Back to Dashboard</button>
+    </div>
+</body>
+</html>

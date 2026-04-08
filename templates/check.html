@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Balance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background: #3498db;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <p>Your current balance is: ₹{{ balance }}</p>
+        <a href="/dashboard">Back to Dashboard</a>
+    </div>
+</body>
+</html>
